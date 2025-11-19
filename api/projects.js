@@ -1,4 +1,14 @@
 export default function handler(req, res) {
+  // --- CORS FIX ---
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+  // ----------------
+
   const projects = [
     { id: 1, title: "AI Support Ticket System", desc: "Spring Boot backend with AI ticket classification.", tags: ["Spring Boot", "AI", "MySQL"] },
     { id: 2, title: "E-Bus Management System", desc: "Real-time bus tracking & ticket booking", tags: ["Firebase", "JavaScript"] },
