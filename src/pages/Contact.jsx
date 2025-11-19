@@ -13,7 +13,7 @@ export default function Contact() {
     setStatus(null);
 
     try {
-      const res = await api.post("/api/contact", form);
+      const res = await api.post("/contact", form);   // 🔥 FIXED
       if (res.data?.success) setStatus({ ok: true, msg: "Message sent!" });
       else setStatus({ ok: false, msg: res.data?.error || "Failed to send" });
     } catch (err) {

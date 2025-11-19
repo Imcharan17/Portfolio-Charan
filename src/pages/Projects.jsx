@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"; 
 import api from "../api";
 import { motion } from "framer-motion";
 
@@ -12,35 +12,35 @@ export default function Projects() {
       id: 1,
       short: "AI",
       title: "AI Support Ticket System",
-      desc: "Smart AI-powered support automation platform built with Spring Boot + NLP. Handles ticket classification, sentiment detection, auto-routing, and priority assignment.",
+      desc: "Smart AI-powered support automation platform built with Spring Boot + NLP.",
       tags: ["Spring Boot", "NLP", "AI", "REST API", "MySQL"],
     },
     {
       id: 2,
       short: "BUS",
       title: "E-Bus Management System",
-      desc: "Real-time bus tracking and ticketing platform with GPS integration, arrival prediction, and admin-driver-user modules for seamless transport management.",
+      desc: "Real-time bus tracking and ticketing platform with GPS integration.",
       tags: ["HTML", "JavaScript", "Firebase", "GPS API"],
     },
     {
       id: 3,
       short: "SIGN",
       title: "Sign Language Translator",
-      desc: "AI-driven hand gesture-based translator using OpenCV + MediaPipe to convert signs into text and speech in real time for accessibility.",
+      desc: "AI-driven hand gesture translator using OpenCV + MediaPipe.",
       tags: ["Python", "OpenCV", "MediaPipe", "AI"],
     },
     {
       id: 4,
       short: "API",
       title: "API Gateway Management System",
-      desc: "Microservice gateway enabling routing, load-balancing, rate-limiting, authentication, and centralized monitoring across all services.",
+      desc: "Gateway with routing, rate-limiting, monitoring and authentication.",
       tags: ["Spring Boot", "Docker", "NGINX", "Microservices"],
     },
   ];
 
   useEffect(() => {
     api
-      .get("/api/projects")
+      .get("/projects")   // 🔥 FIXED
       .then((r) => {
         setProjects(r.data);
         setLoading(false);
@@ -81,8 +81,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
           >
-            
-            {/* Updated Thumbnail SHORT CODE */}
+            {/* Thumbnail with short code */}
             <div className="
               h-44 rounded-xl bg-gradient-to-br from-cyan-400/80 to-violet-600/80 
               flex items-center justify-center text-4xl font-extrabold text-black mb-6
