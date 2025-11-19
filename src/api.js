@@ -1,8 +1,8 @@
 import axios from "axios";
 
-// If running locally → use localhost
-// If live on Vercel → use Vercel URL
-const API_BASE = import.meta.env.VITE_API_URL || window.location.origin;
+// Always use same-domain Vercel API routes
+// No need for VITE_API_URL anymore
+const API_BASE = "/api";
 
 export default axios.create({
   baseURL: API_BASE,
