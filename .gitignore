@@ -1,0 +1,14 @@
+# Dependencies and generated output
+node_modules/
+dist/
+coverage/
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+
+# Logs and operating-system files
+*.log
+.DS_Store
+Thumbs.db

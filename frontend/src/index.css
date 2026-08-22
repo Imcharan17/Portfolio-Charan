@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradientShift {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+}
+
+body { background: #060b25; color: white; min-height: 100vh; }
+a { color: inherit; }
+@keyframes pulseSlow {
+  0% { box-shadow: 0 0 15px rgba(0,255,255,0.3); }
+  50% { box-shadow: 0 0 35px rgba(0,255,255,0.7); }
+  100% { box-shadow: 0 0 15px rgba(0,255,255,0.3); }
+}
+
+.animate-pulseSlow {
+  animation: pulseSlow 3s infinite ease-in-out;
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+/* Hide scrollbar for Firefox */
+* {
+  scrollbar-width: none;
+}
