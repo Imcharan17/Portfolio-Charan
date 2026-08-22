@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies and generated output
 node_modules/
 dist/
@@ -12,3 +13,40 @@ coverage/
 *.log
 .DS_Store
 Thumbs.db
+=======
+# Node modules
+node_modules/
+
+# Ignore package lock
+package-lock.json
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+out/
+
+# Temporary files
+*.tmp
+*.log
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Vite specific
+.vite/
+>>>>>>> 58766d60c879bb6b4efc582ad83040a31376d23a
