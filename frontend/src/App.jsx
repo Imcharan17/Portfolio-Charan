@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
+import { SiC } from "react-icons/si";
 
 const navigation = ["home", "about", "projects", "experience", "contact"];
 
@@ -14,7 +15,9 @@ export default function App() {
       <Background />
       <header className="fixed inset-x-0 top-0 z-30 px-4 pt-4 sm:px-6">
         <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-[#08112b]/75 px-4 py-3 shadow-[0_10px_35px_rgba(0,0,0,0.24)] backdrop-blur-xl sm:px-6">
-          <a href="#home" className="font-bold tracking-tight text-white transition hover:text-cyan-300">CS<span className="text-cyan-300">.</span></a>
+          <a href="#home" aria-label="Charan Sai home" className="grid h-10 w-10 place-items-center rounded-xl border border-cyan-300/30 bg-cyan-300/10 text-2xl text-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.16)] transition hover:-translate-y-0.5 hover:border-cyan-300 hover:bg-cyan-300/20">
+            <SiC />
+          </a>
           <div className="flex flex-wrap justify-end gap-x-3 gap-y-1 text-xs font-medium text-slate-300 sm:gap-x-6 sm:text-sm">
             {navigation.map((item) => <a key={item} href={`#${item}`} className="transition hover:text-cyan-300">{item.charAt(0).toUpperCase() + item.slice(1)}</a>)}
           </div>
