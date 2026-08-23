@@ -28,7 +28,13 @@ app.post('/api/contact', async (req,res)=>{
   if(!name || !email || !message) return res.status(400).json({ success:false, error:'name,email,message required' });
   try{
     const transporter = nodemailer.createTransport({ service: 'gmail', auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS } });
-    await transporter.sendMail({ from: email, to: process.env.EMAIL_USER, subject: `Portfolio Contact: ${subject || 'No subject'}`, text: `Name: ${name}\nEmail: ${email}\n\n${message}` });
+    await transporter.sendMail({
+      from: `Portfolio Contact <${process.env.EMAIL_USER}>`,
+      replyTo: email,
+      to: process.env.EMAIL_USER,
+      subject: `Portfolio Contact: ${subject || "No subject"}`,
+      text: `Name: ${name}\nEmail: ${email}\n\n${message}`
+    });
     return res.json({ success:true, message:'Message sent' });
   }catch(err){
     console.error('mail error', err?.message || err);
