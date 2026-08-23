@@ -1,5 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://localhost:5000",
+  // Use the local Express server while developing, and Vercel serverless
+  // functions after deployment.
+  baseURL: import.meta.env.DEV ? "http://localhost:5000" : "",
 });
