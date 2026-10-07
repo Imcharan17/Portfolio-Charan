@@ -70,8 +70,7 @@ const projectFallback = [
     ],
     accent: "from-cyan-300 via-blue-400 to-indigo-500",
     liveUrl: "https://gatehouse-frontend.onrender.com/",
-    image:
-      "https://images.unsplash.com/photo-1557597774-9d273605df5b?auto=format&fit=crop&w=1200&q=80"
+    image: "/images/visitor-pass-management.svg"
   },
 
   {
