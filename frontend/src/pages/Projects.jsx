@@ -5,6 +5,7 @@ import {
   FaCheckCircle,
   FaExternalLinkAlt,
   FaFileInvoiceDollar,
+  FaIdBadge,
   FaLeaf,
   FaMapMarkedAlt,
   FaRobot,
@@ -48,6 +49,33 @@ const projectFallback = [
 
   {
     id: 2,
+    title: "Visitor Pass Management System",
+    eyebrow: "Secure, streamlined visitor access",
+    desc: "A responsive visitor management platform with role-based dashboards for administrators, receptionists, and employees. It supports the complete visitor workflow from registration and approval to check-in, check-out, and activity tracking.",
+    tags: [
+      "React.js",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST API",
+      "Axios"
+    ],
+    highlights: [
+      "Role-based dashboards and protected navigation",
+      "Visitor registration, approval, check-in, and check-out",
+      "Search, filtering, form validation, and activity tracking",
+      "Business rules for visit dates, duplicate requests, and access control",
+      "Dashboard statistics for pending and active visits"
+    ],
+    accent: "from-cyan-300 via-blue-400 to-indigo-500",
+    liveUrl: "https://gatehouse-frontend.onrender.com/",
+    image:
+      "https://images.unsplash.com/photo-1557597774-9d273605df5b?auto=format&fit=crop&w=1200&q=80"
+  },
+
+  {
+    id: 3,
     title: "E-Bus Management",
     eyebrow: "Smarter public transport",
     desc: "A real-time bus management website designed to make transport information, bus tracking, and operations easier to access and understand.",
@@ -72,7 +100,7 @@ const projectFallback = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Travel Planner",
     eyebrow: "Plan every journey with clarity",
     desc: "A responsive travel-planning website that allows users to explore destinations, organize trips, and view travel information through a clean and interactive interface.",
@@ -95,7 +123,7 @@ const projectFallback = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Invoice Generator",
     eyebrow: "Professional invoices in moments",
     desc: "A React-based invoice generator that allows users to create professional invoices, manage itemized billing, and calculate totals dynamically.",
@@ -118,7 +146,7 @@ const projectFallback = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "API Gateway",
     eyebrow: "Centralized backend gateway",
     desc: "A backend API gateway designed to provide a centralized entry point for services, handling request routing and communication between clients and backend services.",
@@ -143,7 +171,7 @@ const projectFallback = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Sign Language Detection",
     eyebrow: "Real-time computer vision",
     desc: "A computer-vision based sign language detection project designed to recognize hand signs in real time and convert detected signs into meaningful output.",
@@ -170,6 +198,7 @@ const projectFallback = [
 
 const projectIcons = [
   FaLeaf,
+  FaIdBadge,
   FaBus,
   FaMapMarkedAlt,
   FaFileInvoiceDollar,
